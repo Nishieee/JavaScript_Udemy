@@ -62,3 +62,60 @@ console.log(now - 1991 > now - 2018)
 
 const jonas = "I'm " + FirstName + " " + LastName + " and I'm " + ageNishi + " Years old"
 console.log(jonas)
+
+
+
+let a = 100;
+let b = 50;
+const c = a - b;
+
+if (a > b) {
+    console.log(`A is bigger by ${c}`);
+} else {
+    console.log("B is larger");
+}
+
+let birthyear = 1900;
+
+let century;
+if (birthyear < 2000) {
+    console.log('20')
+} else {
+    console.log('21')
+}
+
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+const BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+console.log(BMIMark, BMIJohn);
+
+/* Write your code below. Good luck! 🙂 */
+if (BMIMark > BMIJohn) {
+    console.log(`Mark\'s BMI (${BMIMark}) is higher than John\'s (${BMIJohn})!`)
+} else {
+    console.log(`John\'s BMI (${BMIJohn}) is higher than Mark\'s (${BMIMark})!`)
+}
+
+
+// type conversion
+console.log(Number('Jonas')) /* --> this gives nan and the type of nan is number but it's not a valid number*/
+console.log(typeof (String(13)));
+
+// type coercion 
+console.log("I am " + 23 + "years old") // the plus here will trigger coercion whenever there is operation between a string and a number it will convert the number to string 
+console.log('10' - '5' - 3) // here the - operator will convert the string to number and the answer will be 2 
+console.log('23' * 2) // the string will be converted to numbers and the answer will be 46 at the end 
+
+console.log('25' / 5) //the string will be converted to numbers and the answer will be 5 at the end 
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
+
+// Falsy values -- 0, '', undefined, nan, null
+
+
