@@ -196,10 +196,10 @@ console.log(" nishi has " + nishi.friends.length + ' friends and his best friend
 
 console.log(nishi.calage(nishi.birthyear))
 
-*/
 
 
-/* Write your code below. Good luck! 🙂 */
+
+/* Write your code below. Good luck! 🙂 
 
 const mark = {
     fullName: 'Mark Miller',
@@ -231,3 +231,49 @@ if (mark.bmi > john.bmi) {
     console.log(`John Smith's BMI (${john.bmi}) is higher than Mark Miller's BMI (${mark.bmi}).`);
 }
 
+
+const tips = bills.map(bill => calcTip(bill));
+const totals = bills.map((bill, index) => bill + tips[index]);
+
+console.log(totals)
+/* Write your code below. Good luck! 🙂 
+
+function calcAverage(arr) {
+    let sum = 0.0
+    for (let i = 1; i <= arr.length; i++) {
+        sum += arr[i];
+
+    }
+    return sum / arr.length;
+}
+
+console.log(calcAverage(totals))
+
+*/
+
+
+// let dice = Math.trunc(Math.random() * 6 + 1)
+
+// while (dice <= 6) {
+//     console.log(`you rolled a ${dice}`)
+//     dice = Math.trunc(Math.random() * 6 + 1)
+
+// }
+
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const total = []
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    total.push(tip + bills[i])
+}
+
+console.log(tips)
+console.log(total)
